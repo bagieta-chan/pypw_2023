@@ -1,21 +1,9 @@
 def swap_max(items: list) -> list:
-    current_max  = 0
-    index  = 0
-    for i in range (len(items)):
-        if current_max<=items[i]:
-            current_max = items[i]
-            index = i
+    max_pos = items.index(max(items))
+    items[0], items[max_pos] = items[max_pos], items[0]
 
-    temp = items[0]
-    items[0] = items[index]
-    items[index] = temp
+    return items
 
-    return [items[0], items[index]]
+numbers = [2,0,5,4,7,6,9,3,4,5]
+print(swap_max(numbers))
 
-
-if __name__ == "__ main__":
-    numbers = [2,0,5,4,7,6,9,3,4,5]
-
-    x = swap_max(numbers)
-
-    print(x)
