@@ -7,14 +7,33 @@ def fib_sequence(n: int)->int :
         return n
     a, b = 0,1
     for i in range(n):
+        yield a
         a, b = b, a+b
-    return a
 
-bruh = (fib_sequence(i) for i in range(20))
+def is_prime(number: int)->bool:
+
+    if number <= 1:
+        return False
+    for d in range(2, number):
+        if number%d == 0:
+            return False
+    return True
 
 
-for i in range (20):
-    print(f"number nr: {i}, value: {next(bruh)}")
+def primes(amount: int):
+        x = 0
+        cnt = 0
+
+        while cnt<amount:
+            while not is_prime(x):
+                x+=1
+            yield x
+            x+=1
+            cnt +=1
+
+
+for prime in primes(20):
+    print(prime)
 
 
 
