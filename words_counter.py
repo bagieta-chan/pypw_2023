@@ -16,6 +16,6 @@ def delete_punctuation(text: str)-> str:
 def words_count(input_text: str) -> dict:
     text = delete_punctuation(input_text)
     splitted_text = (text.lower()).split()
-    return Counter(splitted_text).most_common()
+    return Counter(splitted_text).most_common(3)
 
 print(words_count(text))
