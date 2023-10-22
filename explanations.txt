@@ -1,0 +1,5 @@
+czym jest środowisko wirtualne:
+służy do obsługi bibliotek/frameworków
+
+co to pip:
+jest to menadżer pakietów, pozwala instalować bibliotekiu
